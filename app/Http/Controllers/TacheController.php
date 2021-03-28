@@ -75,7 +75,6 @@ class TacheController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *
