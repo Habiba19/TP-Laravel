@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\TacheController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +24,12 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/tache', [TacheController::class, 'index']);
+
 Route::get('/', [WelcomeController::class, 'index']);
 
 Route::get('/contact', [WelcomeController::class, 'contact']);
 
 Route::get('/apropos', [WelcomeController::class, 'apropos']);
 
+Route::resource('taches', 'TacheController');

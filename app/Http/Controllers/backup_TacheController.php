@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\DB;
-
 class TacheController extends Controller
 {
     /**
@@ -15,10 +13,7 @@ class TacheController extends Controller
      */
     public function index()
     {
-        $taches = DB::table('taches')->get();
-
-        return view('tache.index', ['taches' => $taches]);
-
+        //
     }
 
     /**
